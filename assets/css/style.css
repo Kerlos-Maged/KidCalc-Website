@@ -1,0 +1,307 @@
+@import url('./theme.css');
+
+* {
+  padding: 0px ;
+  margin: 0px ;
+  box-sizing: border-box;
+  font-family: 'Oxygen', sans-serif;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  padding: 20px 0px;
+  box-shadow: 0px 0px 20px #0f0f0f;
+}
+
+header .container {
+  width: 90%;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+header .container .logo h2{
+  font-size: 28px;
+  color: #fff;
+}
+
+header .container .inform button{
+  color: #fff;
+  font-size: 19px;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: transparent;
+  border: 2px solid #Fff;
+  display: none;
+}
+
+header .container .inform button.active {
+  display: block;
+} 
+
+.head-kid {
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: #fafafa;
+  text-shadow: 0px 0px 10px#0f0f0f;
+  text-align: center;
+}
+
+.loginform {
+  position: fixed;
+  width: 500px;
+  height: 600px;
+  border-radius: 20px;
+  left: 50%;
+  visibility: hidden;
+  top: 70%;
+  transform: translate(-50%,-50%);
+  z-index: 30;
+  text-align: center;
+}
+
+.loginform.active {
+  visibility: visible;
+  top: 50%;
+  transition: all 0.2s;
+}
+
+.loginform  h2 {
+  margin-top: 60px;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.loginform form {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginform label {
+  align-self: flex-start;
+  color: #fff;
+  font-size: 24px;
+  margin: 10px 0px;
+  margin-left: 50px;
+}
+
+.loginform form input {
+  width: 80%;
+  background-color: transparent;
+  font-size: 20px;
+  outline: none;
+  padding: 8px;
+  border-radius: 10px;
+  margin: 10px 0px;
+  color: white;
+  border: 2px solid #fff;
+}
+  
+.loginform form button {
+  width: 40%;
+  background-color: transparent;
+  height: 40px;
+  font-size: 20px;
+  outline: none;
+  border-radius: 10px;
+  margin: 10px 0px;
+  color: white;
+  border: 2px solid #ffff;
+  cursor: pointer;
+}
+
+.loginform form select {
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  height: 40px;
+  width: 50%;
+  margin: 10px;
+  font-size: 18px;
+  padding-left: 8px;
+  border: 2px solid #fff;
+}
+
+.loginform .close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  cursor: pointer;
+}
+
+.loginform .close span:first-child {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  background-color: white;
+  transform: rotate(-60deg) translate(-7px , 4px);
+}
+
+.loginform .close span:last-child {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  height: 3px;
+  background-color: white;  
+  transform: rotate(60deg) translate(8px , 4px);
+}
+
+.kidcalc {
+  height: 100vh;
+  padding-top: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #e0e0e0;
+}
+
+.kidcalc .container {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0px auto;
+}
+
+.kidcalc .container .result {
+  width: 100%;
+  font-size: 30px;
+  padding: 20px;
+  height: 80px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.kidcalc .container button {
+  width: 100px;
+  padding: 25px 0px;
+  font-size: 30px;
+  color: white;
+  outline: none;
+  border: 1px solid #Fff;
+  cursor: pointer;
+}
+
+.kidcalc .container .btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kidcalc .container .opreations {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.kidcalc .container .numbers {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.answer {
+  width: 100%;
+  padding: 10px ;
+  margin-bottom: 10px;
+  border: 1 px solid #fff;
+  outline: none;
+  font-size: 20px;
+  border-radius: 0px 00px 20px 20px;
+}
+
+.score{ 
+  color: white;
+}
+
+@media screen and (max-width: 700px){
+  .loginform {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 540px){
+  
+  .loginform {
+    width: 90%;
+  }
+  
+  .loginform  h2 {
+    font-size: 34px;
+  }
+  
+  .loginform label {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  
+  .loginform form input {
+    width: 90%;
+    font-size: 18px;
+    padding: 6px;
+  }
+
+  .answer {
+    width: 75%;
+  }
+
+  .loginform form select {
+    width: 70%;
+  }
+  
+  .loginform form button {
+    width: 60%;
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (max-width: 500px){
+
+  .kidcalc .container {
+    width: 90%;
+  }
+
+  .kidcalc .container .result {
+    width: 320px;
+  }
+
+  .kidcalc .container button {
+    width:  80px;
+  }
+
+}
+
+@media screen and (max-width:360px) {
+
+  header .container .inform button{
+    font-size: 16px;
+    padding: 8px 16px;
+  }    
+  
+  header .container .logo h2{
+    font-size: 26px;
+  }
+  
+  .loginform {
+    width: 100%;
+    height: 65%;
+    border-radius: 10px;
+  }
+
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@200;500;800&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>KidCalc</title>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h2>Kid<span>Calc</span></h2>
+      </div>
+      <div class="content">
+        <h3 class="score">0</h3>
+      </div>
+      <div class="inform">
+          <button href="#" class="btn-login active ">Login</button>
+          <button href="#" class="setting">Settings</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="kidcalc">
+    <div class="container">
+      <h2 class="head-kid"></h2>
+      <div class="result"></div>
+      <input class="answer" readonly>
+      <div class="btns">
+        <div class="numbers">
+          <button class="nBtn">C</button>
+          <button class="nBtn">(</button>
+          <button class="nBtn">)</button>
+          <button class="nBtn">9</button>
+          <button class="nBtn">8</button>
+          <button class="nBtn">7</button>
+          <button class="nBtn">6</button>
+          <button class="nBtn">5</button>
+          <button class="nBtn">4</button>
+          <button class="nBtn">3</button>
+          <button class="nBtn">2</button>
+          <button class="nBtn">1</button>
+          <button class="nBtn">.</button> 
+          <button class="nBtn">0</button>
+          <button class="nBtn">Submit</button>
+        </div>
+        <div class="opreations">
+          <button class="nBtn">+</button>
+          <button class="nBtn">-</button>
+          <button class="nBtn">/</button>
+          <button class="nBtn">*</button>
+          <button class="nBtn">=</button> 
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="loginform">
+    <div class="close">
+      <span></span><span></span>
+    </div>
+      <h2 class="head">Log In</h2>
+    <form action="">
+      <label>Your Name :</label>
+      <input type="text" placeholder="Your Name" class="name" maxlength="15" required>
+      <label>Your Age :</label>
+      <input type="Number" min='1' placeholder="Your Age" class="age" required>
+      <select name="themes" id="themes">
+        <option value="Normal">Normal</option>
+        <option value="Space">Space</option>
+        <option value="Ocean">Ocean</option>
+        <option value="Tech">Tech</option>
+      </select>
+      <button class="loginBtn">Log in</button>
+    </form>
+  </div>
+
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
